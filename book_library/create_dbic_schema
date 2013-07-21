@@ -1,0 +1,6 @@
+#!/bin/sh
+dbicdump -o dump_directory=./lib \
+         -o debug=1 \
+         BookLibrary::Schema \
+         'dbi:SQLite:dbname=prod.db'
+#-o components='["InflateColumn::DateTime"]' \
