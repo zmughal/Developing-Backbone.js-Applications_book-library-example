@@ -3,6 +3,6 @@ create table if not exists books (
   id integer primary key autoincrement,
   title string not null,
   author string,
-  year integer,
+  release_date integer,
   keywords string
 );
