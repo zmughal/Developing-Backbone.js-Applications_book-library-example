@@ -12,6 +12,8 @@ sub startup {
 	# Router
 	my $r = $self->routes;
 
+	$r->route('/')->to( cb => sub { shift->render_static('index.html') });
+
 	my $api = $r->under('/api');
 
 	#my @id_match = ( id =>  qr/\d+/ ); # id parameter must be a number
